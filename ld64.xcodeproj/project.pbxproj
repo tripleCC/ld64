@@ -1198,9 +1198,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(TOOLCHAIN_DIR)/usr/local/include",
-				);
+				HEADER_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/local/include";
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
@@ -1220,7 +1218,7 @@
 					"-Wl,-client_name,ld",
 				);
 				PRODUCT_NAME = "ld-classic";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = (
@@ -1279,9 +1277,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(TOOLCHAIN_DIR)/usr/local/include",
-				);
+				HEADER_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/local/include";
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
 				OTHER_CPLUSPLUSFLAGS = (
@@ -1299,7 +1295,7 @@
 					"-Wl,-client_name,ld",
 				);
 				PRODUCT_NAME = "ld-classic";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
@@ -1436,7 +1432,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wformat-nonliteral";
 			};
 			name = Debug;
@@ -1482,7 +1478,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wformat-nonliteral";
 			};
 			name = Release;
@@ -1548,7 +1544,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wformat-nonliteral";
 			};
 			name = "Release-assert";
@@ -1610,9 +1606,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(TOOLCHAIN_DIR)/usr/local/include",
-				);
+				HEADER_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/local/include";
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
 				ONLY_ACTIVE_ARCH = YES;
@@ -1631,7 +1625,7 @@
 					"-Wl,-client_name,ld",
 				);
 				PRODUCT_NAME = "ld-classic";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
