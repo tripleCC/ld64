@@ -1198,9 +1198,28 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/local/include";
+				HEADER_SEARCH_PATHS = (
+					"$(TOOLCHAIN_DIR)/usr/local/include",
+					../tapi/include,
+					../corecrypto/ccdigest/,
+					../corecrypto/cc/,
+					../corecrypto/ccn/,
+					../corecrypto/ccsha1/,
+					../corecrypto/ccsha2/,
+					../dyld/include/,
+					"../llvm-project/llvm/include/",
+					../libplatform/private/,
+					../xnu/libkern/,
+					../xnu/osfmk/,
+					../CommonCrypto/include/,
+					../CommonCrypto/include/Private/,
+				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
+				LIBRARY_SEARCH_PATHS = (
+					../tapi/include,
+					../corecrypto/ccdigest/,
+				);
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -1277,9 +1296,28 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/local/include";
+				HEADER_SEARCH_PATHS = (
+					"$(TOOLCHAIN_DIR)/usr/local/include",
+					../tapi/include,
+					../corecrypto/ccdigest/,
+					../corecrypto/cc/,
+					../corecrypto/ccn/,
+					../corecrypto/ccsha1/,
+					../corecrypto/ccsha2/,
+					../dyld/include/,
+					"../llvm-project/llvm/include/",
+					../libplatform/private/,
+					../xnu/libkern/,
+					../xnu/osfmk/,
+					../CommonCrypto/include/,
+					../CommonCrypto/include/Private/,
+				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
+				LIBRARY_SEARCH_PATHS = (
+					../tapi/include,
+					../corecrypto/ccdigest/,
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"-stdlib=libc++",
 					"$(OTHER_CPLUSPLUSFLAGS)",
@@ -1606,9 +1644,28 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/local/include";
+				HEADER_SEARCH_PATHS = (
+					"$(TOOLCHAIN_DIR)/usr/local/include",
+					../tapi/include,
+					../corecrypto/ccdigest/,
+					../corecrypto/cc/,
+					../corecrypto/ccn/,
+					../corecrypto/ccsha1/,
+					../corecrypto/ccsha2/,
+					../dyld/include/,
+					"../llvm-project/llvm/include/",
+					../libplatform/private/,
+					../xnu/libkern/,
+					../xnu/osfmk/,
+					../CommonCrypto/include/,
+					../CommonCrypto/include/Private/,
+				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
+				LIBRARY_SEARCH_PATHS = (
+					../tapi/include,
+					../corecrypto/ccdigest/,
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-stdlib=libc++",

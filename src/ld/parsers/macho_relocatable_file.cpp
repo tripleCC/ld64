@@ -21,7 +21,7 @@
  * 
  * @APPLE_LICENSE_HEADER_END@
  */
- 
+#define TARGET_OS_BRIDGE
 
 #include <stdint.h>
 #include <stdlib.h>
