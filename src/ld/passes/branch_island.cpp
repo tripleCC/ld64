@@ -58,7 +58,7 @@ public:
 };
 
 
-static bool _s_log = false;
+static bool _s_log = true;
 static ld::Section _s_text_section("__TEXT", "__text", ld::Section::typeCode);
 
 
@@ -490,6 +490,9 @@ static void makeIslandsForSection(const Options& opts, ld::Internal& state, ld::
 			previousIslandEndAddr = insertionPoint->sectionOffset()+insertionPoint->size();
 			insertionPoint = NULL;
 		}
+		
+		fprintf(stderr, "triplecc: %d %llu %llu %s %s\n", !atom->hasFixupsOfKind(ld::Fixup::kindNoneFollowOn), atom->sectionOffset() + atom->size(), previousIslandEndAddr + kBetweenRegions, atom->translationUnitSource(), atom->name());
+		
 		// Can we insert an island after this atom? If so then keep track of it.
 		if ( !atom->hasFixupsOfKind(ld::Fixup::kindNoneFollowOn) )
 			insertionPoint = atom;
@@ -500,6 +503,18 @@ static void makeIslandsForSection(const Options& opts, ld::Internal& state, ld::
 	if ( haveCrossSectionBranches && branchIslandInsertionPoints.empty() ) {
 		branchIslandInsertionPoints.push_back(textSection->atoms.back());
 	}
+	
+	// 为空的情况下，判断加上 stubSize 是否会超出 kBetweenRegions，超出就加一个 insertion points
+	// 上面遍历没算 stubSize，可能 atom 没超，但是加上 stubSize 就超了
+	// 122.6 刚好比 124 小，那四种优化选项关闭一个至少增加 5，127 比 124 大，就能在遍历时添加一个 insertion points
+	// 实际比 123 大就行，比 123 大就会加一个 insertion points，循环中的 insertionPoint 基本都会是最后一个函数，函数基本都会有 fixup 信息
+	if (branchIslandInsertionPoints.empty()) {
+		auto* lastAtom = textSection->atoms.back();
+		if (lastAtom->sectionOffset() + lastAtom->size() + stubsSize > kBetweenRegions) {
+			branchIslandInsertionPoints.push_back(lastAtom);
+		}
+	}
+	
 	const int kIslandRegionsCount = branchIslandInsertionPoints.size();
 
 	if (_s_log) fprintf(stderr, "ld: will use %u branch island regions\n", kIslandRegionsCount);
